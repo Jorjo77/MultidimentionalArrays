@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace PrimaryDiagonal
+namespace SymbolInMatrix
 {
     class Program
     {
@@ -20,6 +20,10 @@ namespace PrimaryDiagonal
                     {
                         IsSymbolExist = true;
                         Console.WriteLine($"({row}, {col})");
+                        break;
+                    }
+                    if (IsSymbolExist)
+                    {
                         break;
                     }
                 }
