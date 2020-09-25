@@ -7,6 +7,7 @@ namespace SumMatrixElements
     {
         static void Main(string[] args)
         {
+            //Add comment for training
             int[] sizes = Console.ReadLine()
                 .Split(", ")
                 .Select(int.Parse)
