@@ -23,11 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimaryDiagonal", "PrimaryD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SymbolInMatrix", "SymbolInMatrix\SymbolInMatrix.csproj", "{2318D16B-94C7-4656-9FD7-9BD8329B2D32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagonalDifference", "DiagonalDifference\DiagonalDifference.csproj", "{87BFA671-964D-40DC-ADCE-7EFC356B9C08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiagonalDifference", "DiagonalDifference\DiagonalDifference.csproj", "{87BFA671-964D-40DC-ADCE-7EFC356B9C08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2x2SquaresInMatrix", "2x2SquaresInMatrix\2x2SquaresInMatrix.csproj", "{04947EE0-477E-4227-BE62-E6F6CBF8EFCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2x2SquaresInMatrix", "2x2SquaresInMatrix\2x2SquaresInMatrix.csproj", "{04947EE0-477E-4227-BE62-E6F6CBF8EFCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximalSum", "MaximalSum\MaximalSum.csproj", "{28344F89-D753-4B36-894C-4AA5EC459104}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaximalSum", "MaximalSum\MaximalSum.csproj", "{28344F89-D753-4B36-894C-4AA5EC459104}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixShuffling", "MatrixShuffling\MatrixShuffling.csproj", "{4FC85FCA-0253-408B-9932-AAD1D6B2E89A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{28344F89-D753-4B36-894C-4AA5EC459104}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28344F89-D753-4B36-894C-4AA5EC459104}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28344F89-D753-4B36-894C-4AA5EC459104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FC85FCA-0253-408B-9932-AAD1D6B2E89A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC85FCA-0253-408B-9932-AAD1D6B2E89A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC85FCA-0253-408B-9932-AAD1D6B2E89A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC85FCA-0253-408B-9932-AAD1D6B2E89A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
