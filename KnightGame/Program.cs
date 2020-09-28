@@ -16,54 +16,55 @@ namespace KnightGame
 
             while (true)
             {
-
-                bool IsAttaced = false;
+                int attacksCounter = 0;
                 for (int row = 0; row < chessPlayground.GetLength(0); row++)
                 {
+                    attacksCounter = 0;
                     for (int col = 0; col < chessPlayground.GetLength(1); col++)
                     {
+
                         if (chessPlayground[row, col] == 'K')
                         {
-                            int attacksCounter = 0;
+
                             if (IsInside(chessPlayground, row - 1, col - 2) && chessPlayground[row - 1, col - 2] == 'K')
                             {
                                 attacksCounter++;
-                                IsAttaced = true;
+
                             }
-                            if (IsInside(chessPlayground, row - 2, col - 1) && chessPlayground[row - 2, col - 1] == 'K')
+                            if (IsInside(chessPlayground, row + 2, col - 1) && chessPlayground[row + 2, col - 1] == 'K')
                             {
                                 attacksCounter++;
-                                IsAttaced = true;
+
                             }
                             if (IsInside(chessPlayground, row + 1, col + 2) && chessPlayground[row + 1, col + 2] == 'K')
                             {
                                 attacksCounter++;
-                                IsAttaced = true;
+
                             }
                             if (IsInside(chessPlayground, row + 1, col - 2) && chessPlayground[row + 1, col - 2] == 'K')
                             {
                                 attacksCounter++;
-                                IsAttaced = true;
+
                             }
                             if (IsInside(chessPlayground, row + 2, col + 1) && chessPlayground[row + 2, col + 1] == 'K')
                             {
                                 attacksCounter++;
-                                IsAttaced = true;
+
                             }
                             if (IsInside(chessPlayground, row - 2, col - 1) && chessPlayground[row - 2, col - 1] == 'K')
                             {
                                 attacksCounter++;
-                                IsAttaced = true;
+
                             }
                             if (IsInside(chessPlayground, row - 1, col + 2) && chessPlayground[row - 1, col + 2] == 'K')
                             {
                                 attacksCounter++;
-                                IsAttaced = true;
+
                             }
                             if (IsInside(chessPlayground, row - 2, col + 1) && chessPlayground[row - 2, col + 1] == 'K')
                             {
                                 attacksCounter++;
-                                IsAttaced = true;
+
                             }
 
                             if (attacksCounter > maxAttacks)
@@ -75,17 +76,17 @@ namespace KnightGame
                         }
                     }
                 }
-                if (IsAttaced)
+                if (attacksCounter > 0)
                 {
                     chessPlayground[rowMaxAttaks, colMaxAttaks] = '0';
                     removementsCounter++;
                 }
-                else
+                else if(attacksCounter == 0)
                 {
+                    Console.WriteLine(removementsCounter);
                     break;
                 }
             }
-            Console.WriteLine(removementsCounter);
         }
         private static char[,] ReadMatrix(int rows, int cols)
         {
@@ -100,9 +101,9 @@ namespace KnightGame
             }
             return matrix;
         }
-        private static bool IsInside(char[,] matrix, int targetRow, int targetCol)
+        private static bool IsInside(char[,] chessPlayground, int targetRow, int targetCol)
         {
-            return targetRow >= 0 && targetCol >= 0 && targetRow < matrix.GetLength(0) && targetCol < matrix.GetLength(1);
+            return targetRow >= 0 && targetRow < chessPlayground.GetLength(0)&&targetCol >= 0 && targetCol < chessPlayground.GetLength(1);
         }
     }
 }
